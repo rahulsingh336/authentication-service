@@ -92,22 +92,18 @@ public class AuthenticationControllerTest {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            // @formatter:off
             http.cors().and().csrf().disable()
                     .authorizeRequests().antMatchers("/authenticate").permitAll()
                     .anyRequest().authenticated()
                     .and().sessionManagement()
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-            // @formatter:on
         }
 
         @Autowired
         void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-            // @formatter:off
             auth
                     .inMemoryAuthentication()
                     .withUser("user").password("pwd").roles("USER");
-            // @formatter:on
         }
 
         @Override

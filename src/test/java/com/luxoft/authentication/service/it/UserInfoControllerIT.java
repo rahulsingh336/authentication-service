@@ -3,7 +3,9 @@ package com.luxoft.authentication.service.it;
 import org.junit.Test;
 import org.springframework.http.MediaType;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
@@ -17,7 +19,9 @@ public class UserInfoControllerIT extends BaseIT {
         getMockMvc().perform(get("/getUserInfo")
                 .contentType(MediaType.APPLICATION_JSON)
                 .header("Authorization", "Bearer " + token))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.firstName", is("Mock-Admin")))
+                .andExpect(jsonPath("$.age", is(36)));
     }
 
     @Test
