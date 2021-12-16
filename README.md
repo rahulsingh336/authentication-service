@@ -7,7 +7,7 @@ This demo service using spring security for login/logout/userInfo using jwt toke
 1. Authenticate api is used to get the JWT Token and Store into in memory cache i.e redis
    (Just for sake of running standalone application, in memory redis and h2 is used)
 2. Using Token that we got in first step, we can hit UserInfo api
-3. If user wants to signout and token is till valid, then signout api can be called, This will delete token from redis cache
+3. If user wants to signout and token is still valid, then signout api can be called, This will delete token from redis cache.
 
 
 ## Build
@@ -26,7 +26,7 @@ This demo service using spring security for login/logout/userInfo using jwt toke
 
 Just start the application with the Spring Boot maven plugin (mvn spring-boot:run). The application is running at http://localhost:8080.
 
-You can use the H2-Console for exploring the database under http://localhost:8080/h2-console
+You can use the H2-Console for exploring the database under http://localhost:8080/h2
 
 ## Roles, Users
 User and roles can be found in data.sql file in resources folder
