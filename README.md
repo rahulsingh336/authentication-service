@@ -84,16 +84,16 @@ Response
 ## Screenshots of running app
 
 ### get Token admin role
-![Screenshot from running application](documentation/authentication.png?raw=true "Screenshot JWT Spring Security Demo")
+![Screenshot from running application](documentation/authentication.PNG?raw=true "Screenshot JWT Spring Security Demo")
 
 ### get User Info
-![Screenshot from running application](documentation/getUserInfo.png?raw=true "Screenshot JWT Spring Security Demo")
+![Screenshot from running application](documentation/getUserInfo.PNG?raw=true "Screenshot JWT Spring Security Demo")
 
 ### Log out User
-![Screenshot from running application](documentation/logout.png?raw=true "Screenshot JWT Spring Security Demo")
+![Screenshot from running application](documentation/logout.PNG?raw=true "Screenshot JWT Spring Security Demo")
 
 ### get Token vendor role
-![Screenshot from running application](documentation/vendorAuthenticate.png?raw=true "Screenshot JWT Spring Security Demo")
+![Screenshot from running application](documentation/vendorAuthenticate.PNG?raw=true "Screenshot JWT Spring Security Demo")
 
 ### get UserInfo(This should fail)
-![Screenshot from running application](documentation/getUserInfoFailed.png?raw=true "Screenshot JWT Spring Security Demo")
+![Screenshot from running application](documentation/getUserInfoFailed.PNG?raw=true "Screenshot JWT Spring Security Demo")
