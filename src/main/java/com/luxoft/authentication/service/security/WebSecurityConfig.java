@@ -28,9 +28,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
     @Autowired
-    private RestAccessDeniedHandler restAccessDeniedHandler;
-
-    @Autowired
     private UserDetailsService jwtUserDetailsService;
 
     @Autowired
@@ -67,7 +64,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling()
-                    .accessDeniedHandler(restAccessDeniedHandler)
                     .authenticationEntryPoint(jwtAuthenticationEntryPoint)
                 .and()
                     .sessionManagement()
